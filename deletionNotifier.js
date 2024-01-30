@@ -1,4 +1,4 @@
-var calendarId = 'steger.josy@gmail.com'; // Replace with your Calendar ID
+var calendarId = '<YOUR-EMAIL>@gmail.com'; // Replace with your Calendar ID
 
 function checkForDeletedEvents() {
   var now = new Date();
@@ -70,12 +70,12 @@ function sendCancellationEmail(title, email, name, dateStr, timeStr) {
   timeStr = timeStr.replace(/\r?\n|\r/g, "").trim();
 
   var subject = "Deine Buchung wurde storniert";
-  var body = "Hallo " + name + "\n\nDeine Buchung für die '" + title + "' am " + dateStr + " um " + timeStr + " wurde soeben storniert.\n\nLiebe Grüsse und bis bald,\nJosy\n\n(Bitte antworte nicht auf diese E-mail)";
+  var body = "Hallo " + name + "\n\nDeine Buchung für die '" + title + "' am " + dateStr + " um " + timeStr + " wurde soeben storniert.\n\nLiebe Grüsse und bis bald,\n<YOUR-NAME>\n\n(Bitte antworte nicht auf diese E-mail)";
 
   // Send email using GmailApp
   GmailApp.sendEmail(email, subject, body, {
     from: calendarId,
-    name: "info@farben-strahl.ch"
+    name: "<YOUR-NAME>"
   });
 
   Logger.log("E-Mail gesendet an: " + email);
