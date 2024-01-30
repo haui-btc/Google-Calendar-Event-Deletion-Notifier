@@ -17,7 +17,7 @@ This Google Apps Script is designed to monitor a specified Google Calendar for d
 5. **Data Storage**: The script stores the current event IDs and their details for future reference using Google's `PropertiesService`.
 
 ## Prerequisites
-- Access to Google Apps Script.
+- Access to Google Apps Script: https://www.google.com/script/start/
 - A Google Calendar with events scheduled.
 - Events in the calendar should have descriptions formatted in a specific way for the script to correctly extract email addresses and names.
 
